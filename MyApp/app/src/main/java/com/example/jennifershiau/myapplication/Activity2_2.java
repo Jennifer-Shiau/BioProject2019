@@ -31,7 +31,7 @@ public class Activity2_2 extends AppCompatActivity {
                     cal_t = cal*5/2;
                 }
                 else {
-                    cal_t = cal*10/3;
+                    cal_t = cal*5/2;
                 }
                 gv.setCalt(cal_t);
 

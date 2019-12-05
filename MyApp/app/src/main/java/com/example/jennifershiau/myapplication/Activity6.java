@@ -154,7 +154,8 @@ public class Activity6 extends AppCompatActivity {
                         changeResult.add(i);
                     }
                 }
-                gv.changeResult = changeResult;
+                // gv.changeResult = changeResult;
+                gv.result = changeResult;
                 Intent intent = new Intent(Activity6.this,Activity7.class);
                 startActivity(intent);
             }

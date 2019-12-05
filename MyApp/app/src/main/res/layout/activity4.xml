@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context="com.example.jennifershiau.myapplication.Activity4">
 
     <LinearLayout
@@ -28,6 +28,7 @@
                 android:layout_weight="1"
                 android:text="請勾選喜歡的："
                 android:textSize="20sp" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -37,34 +38,26 @@
 
             <CheckBox
                 android:id="@+id/c0"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="高麗菜"
+                android:text="清炒高麗菜"
                 android:textSize="13sp" />
 
             <CheckBox
                 android:id="@+id/c1"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="青江菜"
+                android:text="清炒青江菜"
                 android:textSize="13sp" />
 
             <CheckBox
                 android:id="@+id/c2"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="菠菜"
-                android:textSize="13sp" />
-
-            <CheckBox
-                android:id="@+id/c3"
-                android:layout_width="72dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="花椰菜"
+                android:text="清炒菠菜"
                 android:textSize="13sp" />
         </LinearLayout>
 
@@ -74,24 +67,38 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/c4"
-                android:layout_width="83dp"
+                android:id="@+id/c3"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="海帶"
+                android:text="清炒花椰菜"
+                android:textSize="13sp" />
+
+            <CheckBox
+                android:id="@+id/c4"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="薑絲炒海帶結"
                 android:textSize="13sp" />
 
             <CheckBox
                 android:id="@+id/c5"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="胡蘿蔔"
+                android:text="胡蘿蔔絲炒蛋"
                 android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/c6"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="鹹蛋苦瓜"
@@ -99,10 +106,18 @@
 
             <CheckBox
                 android:id="@+id/c7"
-                android:layout_width="72dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="茄子"
+                android:text="魚香茄子"
+                android:textSize="13sp" />
+
+            <CheckBox
+                android:id="@+id/c8"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="炒竹筍"
                 android:textSize="13sp" />
         </LinearLayout>
 
@@ -112,16 +127,8 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/c8"
-                android:layout_width="83dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="竹筍"
-                android:textSize="13sp" />
-
-            <CheckBox
                 android:id="@+id/c9"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="蔥燒豆腐"
@@ -129,7 +136,7 @@
 
             <CheckBox
                 android:id="@+id/c10"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="番茄炒蛋"
@@ -137,7 +144,7 @@
 
             <CheckBox
                 android:id="@+id/c11"
-                android:layout_width="72dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="蒸蛋"
@@ -151,34 +158,26 @@
 
             <CheckBox
                 android:id="@+id/c12"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="豆干炒肉絲"
-                android:textSize="11sp" />
+                android:textSize="13sp" />
 
             <CheckBox
                 android:id="@+id/c13"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="炸豬排"
+                android:text="日式炸豬排"
                 android:textSize="13sp" />
 
             <CheckBox
                 android:id="@+id/c14"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="香腸"
-                android:textSize="13sp" />
-
-            <CheckBox
-                android:id="@+id/c15"
-                android:layout_width="72dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="滷雞腿"
+                android:text="炒香腸"
                 android:textSize="13sp" />
         </LinearLayout>
 
@@ -188,24 +187,38 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/c16"
-                android:layout_width="83dp"
+                android:id="@+id/c15"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="控肉"
+                android:text="滷雞腿"
+                android:textSize="13sp" />
+
+            <CheckBox
+                android:id="@+id/c16"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="台式控肉"
                 android:textSize="13sp" />
 
             <CheckBox
                 android:id="@+id/c17"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="蔥爆牛肉"
                 android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/c18"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="三杯雞"
@@ -213,10 +226,18 @@
 
             <CheckBox
                 android:id="@+id/c19"
-                android:layout_width="72dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="炒蛤蜊"
+                android:text="鮮炒蛤蜊"
+                android:textSize="13sp" />
+
+            <CheckBox
+                android:id="@+id/c20"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="鹽烤秋刀魚"
                 android:textSize="13sp" />
         </LinearLayout>
 
@@ -226,16 +247,8 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/c20"
-                android:layout_width="83dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="秋刀魚"
-                android:textSize="13sp" />
-
-            <CheckBox
                 android:id="@+id/c21"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="清蒸鱈魚"
@@ -243,15 +256,15 @@
 
             <CheckBox
                 android:id="@+id/c22"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="吳郭魚"
+                android:text="煎吳郭魚"
                 android:textSize="13sp" />
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="72dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
         </LinearLayout>
@@ -269,8 +282,9 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="請勾選不喜歡的："
+                android:text="請勾選不喜歡的（或不能吃的）："
                 android:textSize="20sp" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -280,34 +294,26 @@
 
             <CheckBox
                 android:id="@+id/ch0"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="高麗菜"
+                android:text="清炒高麗菜"
                 android:textSize="13sp" />
 
             <CheckBox
                 android:id="@+id/ch1"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="青江菜"
+                android:text="清炒青江菜"
                 android:textSize="13sp" />
 
             <CheckBox
                 android:id="@+id/ch2"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="菠菜"
-                android:textSize="13sp" />
-
-            <CheckBox
-                android:id="@+id/ch3"
-                android:layout_width="72dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="花椰菜"
+                android:text="清炒菠菜"
                 android:textSize="13sp" />
         </LinearLayout>
 
@@ -317,24 +323,38 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/ch4"
-                android:layout_width="83dp"
+                android:id="@+id/ch3"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="海帶"
+                android:text="清炒花椰菜"
+                android:textSize="13sp" />
+
+            <CheckBox
+                android:id="@+id/ch4"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="薑絲炒海帶結"
                 android:textSize="13sp" />
 
             <CheckBox
                 android:id="@+id/ch5"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="胡蘿蔔"
+                android:text="紅蘿蔔絲炒蛋"
                 android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/ch6"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="鹹蛋苦瓜"
@@ -342,10 +362,18 @@
 
             <CheckBox
                 android:id="@+id/ch7"
-                android:layout_width="72dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="茄子"
+                android:text="魚香茄子"
+                android:textSize="13sp" />
+
+            <CheckBox
+                android:id="@+id/ch8"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="炒竹筍"
                 android:textSize="13sp" />
         </LinearLayout>
 
@@ -355,16 +383,8 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/ch8"
-                android:layout_width="83dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="竹筍"
-                android:textSize="13sp" />
-
-            <CheckBox
                 android:id="@+id/ch9"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="蔥燒豆腐"
@@ -372,7 +392,7 @@
 
             <CheckBox
                 android:id="@+id/ch10"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="番茄炒蛋"
@@ -380,7 +400,7 @@
 
             <CheckBox
                 android:id="@+id/ch11"
-                android:layout_width="72dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="蒸蛋"
@@ -394,34 +414,26 @@
 
             <CheckBox
                 android:id="@+id/ch12"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="豆干炒肉絲"
-                android:textSize="11sp" />
+                android:textSize="13sp" />
 
             <CheckBox
                 android:id="@+id/ch13"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="炸豬排"
+                android:text="日式炸豬排"
                 android:textSize="13sp" />
 
             <CheckBox
                 android:id="@+id/ch14"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="香腸"
-                android:textSize="13sp" />
-
-            <CheckBox
-                android:id="@+id/ch15"
-                android:layout_width="72dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="滷雞腿"
+                android:text="炒香腸"
                 android:textSize="13sp" />
         </LinearLayout>
 
@@ -431,24 +443,38 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/ch16"
-                android:layout_width="83dp"
+                android:id="@+id/ch15"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="控肉"
+                android:text="滷雞腿"
+                android:textSize="13sp" />
+
+            <CheckBox
+                android:id="@+id/ch16"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="台式控肉"
                 android:textSize="13sp" />
 
             <CheckBox
                 android:id="@+id/ch17"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="蔥爆牛肉"
                 android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/ch18"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="三杯雞"
@@ -456,10 +482,18 @@
 
             <CheckBox
                 android:id="@+id/ch19"
-                android:layout_width="72dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="炒蛤蜊"
+                android:text="鮮炒蛤蜊"
+                android:textSize="13sp" />
+
+            <CheckBox
+                android:id="@+id/ch20"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="鹽烤秋刀魚"
                 android:textSize="13sp" />
         </LinearLayout>
 
@@ -469,16 +503,8 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/ch20"
-                android:layout_width="83dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="秋刀魚"
-                android:textSize="13sp" />
-
-            <CheckBox
                 android:id="@+id/ch21"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="清蒸鱈魚"
@@ -486,15 +512,15 @@
 
             <CheckBox
                 android:id="@+id/ch22"
-                android:layout_width="83dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="吳郭魚"
+                android:text="煎吳郭魚"
                 android:textSize="13sp" />
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="72dp"
+                android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
         </LinearLayout>
@@ -504,7 +530,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:orientation="horizontal">
 
             <Button
@@ -513,7 +540,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:text="查看照片" />
+                android:text="查看照片"
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/button7"
@@ -525,4 +553,4 @@
         </LinearLayout>
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</ScrollView>

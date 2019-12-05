@@ -10,16 +10,24 @@ import java.util.Calendar;
 
 public class DBCal extends AppCompatActivity {
     EditText Cal;
-    myDbAdapter helper;
+    DbAdapter_Cal helper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dbcal);
-        Cal = (EditText) findViewById(R.id.editText);
+        // Cal = (EditText) findViewById(R.id.editText);
 
-        helper = new myDbAdapter(this);
+        helper = new DbAdapter_Cal(this);
+
+        String data = helper.getData();
+
+        TextView show = (TextView) findViewById(R.id.tv3);
+        show.append(data);
+
+        // Message.message(this,data);
     }
-    public void addUser(View view)
+    /*
+    public void addData(View view)
     {
         String cal = Cal.getText().toString();
         if(cal.isEmpty())
@@ -28,9 +36,10 @@ public class DBCal extends AppCompatActivity {
         }
         else
         {
-            Calendar rightNow = Calendar.getInstance();
-            int hour = rightNow.get(Calendar.HOUR_OF_DAY);
-            String time = Integer.toString(hour);
+            Calendar now = Calendar.getInstance();
+            int hour = now.get(Calendar.HOUR_OF_DAY);
+            int minute = now.get(Calendar.MINUTE);
+            String time = hour + ":" + minute;
             long id = helper.insertData(time, cal);
             if(id <= 0)
             {
@@ -44,7 +53,7 @@ public class DBCal extends AppCompatActivity {
         }
     }
 
-    public void viewdata(View view)
+    public void viewData(View view)
     {
         String data = helper.getData();
 
@@ -55,5 +64,6 @@ public class DBCal extends AppCompatActivity {
 
         Message.message(this,data);
     }
+     */
 }
 

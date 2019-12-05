@@ -21,7 +21,7 @@
             <TextView
                 android:id="@+id/tv13"
                 android:layout_width="wrap_content"
-                android:layout_height="350dp"
+                android:layout_height="300dp"
                 android:layout_weight="1"
                 android:text="TextView"
                 android:textSize="20sp" />
@@ -40,7 +40,7 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
                 android:text="更改" />
 
@@ -48,18 +48,35 @@
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="15dp"
                 android:layout_weight="1"
                 android:text="儲存" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/button11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:text="記帳" />
+                android:text="記錄" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:text="食譜" />
 
         </LinearLayout>
 

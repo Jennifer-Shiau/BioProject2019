@@ -40,16 +40,22 @@ public class Activity1 extends AppCompatActivity {
         TextView a = (TextView) findViewById(R.id.tv4);
         a.setText("年齡：" + age);
 
-        int mode = data.getInt("mode", 0);
-        TextView m = (TextView) findViewById(R.id.tv5);
-        if(mode==1) {
-            m.setText("模式：增重");
+        int level = data.getInt("level", 0);
+        TextView l = (TextView) findViewById(R.id.tv5);
+        if(level==0) {
+            l.setText("活動程度：臥床");
         }
-        else if(mode==-1) {
-            m.setText("模式：減重");
+        else if(level==1) {
+            l.setText("活動程度：坐著工作，不能選擇走動，很少或沒有劇烈的休閒活動");
+        }
+        else if(level==2) {
+            l.setText("活動程度：坐著工作，可自由決定並要求四處走動，但很少或沒有劇烈的休閒活動");
+        }
+        else if(level==3) {
+            l.setText("活動程度：站著工作，例如做家務、店員");
         }
         else {
-            m.setText("模式：正常");
+            l.setText("活動程度：費力的工作或活動量大的休閒活動");
         }
 
         int oth = data.getInt("oth", 0);
@@ -81,14 +87,13 @@ public class Activity1 extends AppCompatActivity {
             cal = (int)Math.round(cal_t*0.4);
         }
         else {
-            cal = (int)Math.round(cal_t*0.3);
+            cal = (int)Math.round(cal_t*0.4);
         }
         TextView c = (TextView) findViewById(R.id.tv8);
         c.setText("此餐所需攝取卡路里：" + cal + "卡");
 
         Button change = (Button)findViewById(R.id.button1);
         Button inf = (Button)findViewById(R.id.button2);
-        Button money = (Button)findViewById(R.id.button3);
 
         change.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
@@ -98,16 +103,10 @@ public class Activity1 extends AppCompatActivity {
         });
         inf.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
-                Intent intent = new Intent(Activity1.this,Activity1_2.class);
+                //Intent intent = new Intent(Activity1.this,Activity1_2.class);
+                Intent intent = new Intent(Activity1.this,Healthdb.class);
                 startActivity(intent);
             }
         });
-        money.setOnClickListener(new Button.OnClickListener() {
-            public void onClick(View arg0) {
-                Intent intent = new Intent(Activity1.this,Activity1_3.class);
-                startActivity(intent);
-            }
-        });
-
     }
 }

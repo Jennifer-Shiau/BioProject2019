@@ -21,7 +21,7 @@
             <TextView
                 android:id="@+id/tv17"
                 android:layout_width="wrap_content"
-                android:layout_height="320dp"
+                android:layout_height="350dp"
                 android:layout_weight="1"
                 android:text="TextView"
                 android:textSize="20sp" />
@@ -39,7 +39,7 @@
                 android:id="@+id/button11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:text="更改" />
 
@@ -47,10 +47,19 @@
                 android:id="@+id/button13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="記帳" />
+                android:text="記錄" />
 
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="食譜" />
         </LinearLayout>
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

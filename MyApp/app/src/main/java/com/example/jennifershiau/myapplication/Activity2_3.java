@@ -84,10 +84,16 @@ public class Activity2_3 extends AppCompatActivity {
         return fish; //fish = 20 or 21 or 22
     }
 
+    DbAdapter_Cal helper;
+    DbAdapter_Food helper_2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity2_3);
+
+        helper = new DbAdapter_Cal(this);
+        helper_2 = new DbAdapter_Food(this);
 
         GlobalVariable gv = (GlobalVariable)getApplicationContext();
         List<Food> foods = gv.foods;
@@ -102,11 +108,13 @@ public class Activity2_3 extends AppCompatActivity {
         Calendar rightNow = Calendar.getInstance();
         int hour = rightNow.get(Calendar.HOUR_OF_DAY);
         int cal;
+        Random ran = new Random();
+        int r = ran.nextInt(200) - 100; // -100 ~ +100
         if (hour>=10 && hour<=15) {
-            cal = (int)Math.round(cal_t*0.4);
+            cal = (int)Math.round(cal_t*0.4) + r;
         }
         else {
-            cal = (int)Math.round(cal_t*0.3);
+            cal = (int)Math.round(cal_t*0.4) + r;
         }
 
         for (int i=0;i<23;i++) {
@@ -115,7 +123,6 @@ public class Activity2_3 extends AppCompatActivity {
             fo.setCal(gv.calList[i]);
             fo.setOther(gv.othList[oth][i]);
             fo.setNut(gv.nutList[i]);
-            fo.setPrice(gv.priceList[i]);
 
             foods.add(fo);
         }
@@ -132,35 +139,45 @@ public class Activity2_3 extends AppCompatActivity {
         }
 
         //random vegetables
-        int[] a = new int[3];
-        int[] b = new int[2];
-        int[] c = new int[4];
-        Random ran = new Random();
-        int t1 = ran.nextInt(3);
-        int t2 = ran.nextInt(2);
-        int t3 = ran.nextInt(4);
-        for(int i=0;i<3;i++) {
-            if(i==t1) { a[i] = 120; }
-            else { a[i] = 10; }
+        int t1;
+        while (true)
+        {
+            t1 = ran.nextInt(13) % 9;
+            if (foods.get(t1).getValue() >= 0)
+                break;
         }
-        for(int i=0;i<2;i++) {
-            if(i==t2) { b[i] = 90; }
-            else { b[i] = 10; }
-        }
-        for(int i=0;i<4;i++) {
-            if(i==t3) { c[i] = 20; }
-            else { c[i] = 10; }
+        if (t1 <= 3)
+            foods.get(t1).setNut(100);
+        else
+            foods.get(t1).setNut(90);
+
+        int max = 0;
+        for(int i=0;i<9;i++) {
+            if (foods.get(i).getValue() > max)
+            {
+                max = foods.get(i).getValue();
+            }
         }
 
-        foods.get(0).setNut(b[0]);
-        foods.get(1).setNut(a[0]);
-        foods.get(2).setNut(a[1]);
-        foods.get(3).setNut(a[2]);
-        foods.get(4).setNut(c[0]);
-        foods.get(5).setNut(b[1]);
-        foods.get(6).setNut(c[1]);
-        foods.get(7).setNut(c[2]);
-        foods.get(8).setNut(c[3]);
+        List<Integer> _temp = new ArrayList<Integer>();
+        for(int i=0;i<9;i++) {
+            if (foods.get(i).getValue() == max)
+            {
+                _temp.add(i);
+            }
+        }
+
+        int v1 = ran.nextInt(_temp.size());
+        int vegetable = _temp.get(v1);
+
+        int t2;
+        while (true)
+        {
+            t2 = ran.nextInt(9);
+            if ((foods.get(t2).getValue() >= 0) && (t2 != vegetable))
+                break;
+        }
+        foods.get(t2).setNut(10);
 
         //start calculating
 
@@ -169,42 +186,23 @@ public class Activity2_3 extends AppCompatActivity {
         //rice
         calorie += 230;
 
-        //vegetables
-        int[] vege_val = new int[9];
-        for(int i=0;i<9;i++) {
-            vege_val[i] = foods.get(i).getValue();
-        }
-        //sort vegetables
-        List<Element> vege_sort = new ArrayList<Element>();
-        for (int i = 0; i < vege_val.length; i++) {
-            vege_sort.add(new Element(i, vege_val[i]));
-        }
-        Collections.sort(vege_sort);
-        Collections.reverse(vege_sort);
-
-        //result
-        int[] vegetables = {vege_sort.get(0).index, vege_sort.get(1).index, vege_sort.get(2).index};
-        Arrays.sort(vegetables);
-        for(int i=0;i<3;i++) {
-            calorie += foods.get(vegetables[i]).getCal();
-        }
+        calorie += foods.get(vegetable).getCal();
 
         //other foods
         int check = 0;
-        for(int i=0;i<3;i++) {
-            if (vegetables[i]==8) { check = 1; }
-        }
+        if (vegetable==8 || t2==8) { check = 1; }
+
         int[] oth_index;
 
         int egg = chooseEgg(foods); //egg = 10 or 11
         int fish = chooseFish(foods); //fish = 20 or 21 or 22
 
         if (check==0) {
-            int[] index = {9, egg, 12, 13, 14, 15, 16, 17, 18, 19, fish};
+            int[] index = {t2, 9, egg, 12, 13, 14, 15, 16, 17, 18, 19, fish};
             oth_index = index;
         }
         else {
-            int[] index = {egg, 12, 13, 14, 15, 16, 17, 18, 19, fish};
+            int[] index = {t2, egg, 12, 13, 14, 15, 16, 17, 18, 19, fish};
             oth_index = index;
         }
 
@@ -252,12 +250,12 @@ public class Activity2_3 extends AppCompatActivity {
 
         //result
         List<Integer> result = new ArrayList<Integer>();
-        for(int i=0;i<3;i++) {
-            result.add(vegetables[i]);
-        }
+        result.add(vegetable);
+
         for(int i=0;i<s.size();i++) {
             result.add(s.get(i));
         }
+        Collections.sort(result);
         gv.result = result;
 
         TextView showResult = (TextView) findViewById(R.id.tv17);
@@ -268,18 +266,13 @@ public class Activity2_3 extends AppCompatActivity {
             showResult.setText("晚餐結果： \n");
         }
 
-        int price = 0;
         for (int i = 0; i < result.size(); i++) {
             int index = result.get(i);
             showResult.append(foods.get(index).getName() + " (" + foods.get(index).getCal() + "卡) \n");
-            price += foods.get(index).getPrice();
         }
-        price += 8;
-        gv.price = price;
 
         showResult.append("白飯 (230卡) \n");
         showResult.append("總卡路里 = " + calorie + "卡 \n");
-        showResult.append("價格：$" + gv.price + "\n");
 
         //optional reminder
         for (int i = 0; i < result.size(); i++) {
@@ -288,9 +281,17 @@ public class Activity2_3 extends AppCompatActivity {
             }
         }
 
+        final String _cal = Integer.toString(calorie);
+        String food = "";
+        for (int i = 0; i < result.size(); i++) {
+            int index = result.get(i);
+            food = food.concat(foods.get(index).getName() + "\n");
+        }
+        final String _food = food;
+
         Button change = (Button)findViewById(R.id.button11);
-        //Button home = (Button)findViewById(R.id.button12);
-        Button money = (Button)findViewById(R.id.button13);
+        Button record = (Button)findViewById(R.id.button13);
+        Button recipe = (Button)findViewById(R.id.button14);
 
         change.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
@@ -298,38 +299,24 @@ public class Activity2_3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        money.setOnClickListener(new Button.OnClickListener() {
+        record.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
-                GlobalVariable gv = (GlobalVariable) getApplicationContext();
-                SharedPreferences data = getSharedPreferences("user" , MODE_PRIVATE);
-                String s = data.getString("bill", "");
-                int total = data.getInt("total", 0);
-                Calendar rightNow = Calendar.getInstance();
-                int year = rightNow.get(Calendar.YEAR);
-                int month = rightNow.get(Calendar.MONTH) + 1;
-                int day = rightNow.get(Calendar.DAY_OF_MONTH);
-                int hour = rightNow.get(Calendar.HOUR_OF_DAY);
-                if (hour>=10 && hour<=15) {
-                    s = s + "\n" + year + "/" + month + "/" + day + "   午餐  $" + Integer.toString(gv.price) + "\n";
-                }
-                else {
-                    s = s + "\n" + year + "/" + month + "/" + day + "   晚餐  $" + Integer.toString(gv.price) + "\n";
-                }
-                total = total + gv.price;
-                data.edit().putString("bill", s).apply();
-                data.edit().putInt("total", total).apply();
-
-                Toast.makeText(getApplicationContext(), "記帳完成！", Toast.LENGTH_SHORT).show();
+                Calendar now = Calendar.getInstance();
+                int month = now.get(Calendar.MONTH) + 1;
+                int day = now.get(Calendar.DAY_OF_MONTH);
+                String hour = String.format("%02d", now.get(Calendar.HOUR_OF_DAY));
+                String minute = String.format("%02d", now.get(Calendar.MINUTE));
+                String time = month + "/" + day + "  " + hour + ":" + minute;
+                helper.insertData(time, _cal);
+                helper_2.insertData(time, _food);
+                Message.message(getApplicationContext(),"記錄完成！");
             }
         });
-        /*
-        home.setOnClickListener(new Button.OnClickListener() {
+        recipe.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
-                Intent intent = new Intent(Activity2_3.this,MainActivity.class);
+                Intent intent = new Intent(Activity2_3.this,Activity8.class);
                 startActivity(intent);
             }
         });
-        */
     }
-
 }

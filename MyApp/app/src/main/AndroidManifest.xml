@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DBCal"></activity>
+        <activity android:name=".Activity8"></activity>
+        <activity android:name=".DBFood" />
+        <activity android:name=".Healthdb" />
+        <activity android:name=".DBCal" />
         <activity android:name=".Test" />
         <activity android:name=".MainActivity">
             <intent-filter>

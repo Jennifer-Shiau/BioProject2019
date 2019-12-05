@@ -20,26 +20,13 @@ tools:context=".DBCal">
         android:layout_marginTop="15dp"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editText"
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number" />
-
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="addUser"
-            android:text="Add" />
-
-        <Button
-            android:id="@+id/button14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="viewdata"
-            android:text="View" />
+            android:gravity="center"
+            android:text="每餐卡路里"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout

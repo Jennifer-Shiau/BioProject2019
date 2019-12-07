@@ -9,30 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="466a36ae-625d-408c-8c35-2784e71c3eba" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jennifershiau/myapplication/Activity6.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jennifershiau/myapplication/Activity6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jennifershiau/myapplication/DBCal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jennifershiau/myapplication/DBCal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jennifershiau/myapplication/Healthdb.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jennifershiau/myapplication/Healthdb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jennifershiau/myapplication/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jennifershiau/myapplication/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_dbcal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_dbcal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_dbfood.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_dbfood.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_healthdb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_healthdb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-    </list>
+    <list default="true" id="466a36ae-625d-408c-8c35-2784e71c3eba" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

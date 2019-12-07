@@ -141,7 +141,7 @@ public class Activity6 extends AppCompatActivity {
         ll.addView(ok);
 
         TextView t4 = new TextView(this);
-        t4.setText("\n");
+        t4.setText("\n\n");
         t4.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
         ll.addView(t4);
 

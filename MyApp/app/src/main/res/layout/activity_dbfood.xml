@@ -4,6 +4,7 @@ android:layout_width="fill_parent"
 android:layout_height="fill_parent"
 android:fillViewport="true"
 xmlns:tools="http://schemas.android.com/tools"
+android:background="@drawable/p3_1"
 tools:context=".DBFood">
 
 <LinearLayout

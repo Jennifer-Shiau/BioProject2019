@@ -4,6 +4,7 @@
     android:layout_height="fill_parent"
     android:fillViewport="true"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/p3_1"
     tools:context="com.example.jennifershiau.myapplication.Activity6">
 
     <LinearLayout
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="110dp"
+        android:layout_marginRight="50dp"
         android:layout_marginTop="15dp"
         android:orientation="vertical">
 

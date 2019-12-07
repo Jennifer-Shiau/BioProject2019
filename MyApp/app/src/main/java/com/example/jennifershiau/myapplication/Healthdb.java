@@ -1,7 +1,6 @@
 package com.example.jennifershiau.myapplication;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,8 +14,8 @@ public class Healthdb extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_healthdb);
 
-        Button dbCal = (Button)findViewById(R.id.button15);
-        Button dbFood = (Button)findViewById(R.id.button16);
+        ImageButton dbCal = (ImageButton)findViewById(R.id.button15);
+        ImageButton dbFood = (ImageButton)findViewById(R.id.button16);
 
         dbCal.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View arg0) {
